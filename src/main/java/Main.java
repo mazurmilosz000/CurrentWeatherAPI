@@ -6,7 +6,7 @@ public class Main {
 
 
         APIHandler apiHandler = new APIHandler();
-        Coordinates coordinates = apiHandler.getCoordinates("");
+        Coordinates coordinates = apiHandler.getCoordinates("Kraków");
         apiHandler.checkCurrentWeather(coordinates);
 
 

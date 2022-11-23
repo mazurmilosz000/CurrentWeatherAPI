@@ -71,7 +71,8 @@ public class APIHandler {
     public void checkCurrentWeather(Coordinates coor) throws Exception {
             HttpRequest getRequest = HttpRequest.newBuilder()
                     .uri(new URI("https://api.openweathermap.org/data/2.5/weather?lat=" +
-                            coor.getLat() + "&lon=" + coor.getLon() + "&appid=" + getApiKey())).build();
+                            coor.getLat() + "&lon=" + coor.getLon() + "&appid=" + getApiKey() +
+                            "&units=metric")).build();
 
             HttpClient client = HttpClient.newHttpClient();
             HttpResponse<String> getResponse = client.send(getRequest, HttpResponse.BodyHandlers.ofString());
